@@ -5,11 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
-import { MainComponent } from './layouts/main/main.component';
 
 @NgModule({
-  declarations: [AppComponent, MainComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, CoreModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
