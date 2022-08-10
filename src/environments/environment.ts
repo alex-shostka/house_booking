@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  getHouses: 'http://192.168.126.133:8236/api/houses',
 };
 
 /*
