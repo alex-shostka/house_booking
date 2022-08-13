@@ -4,10 +4,21 @@ import { RouterModule } from '@angular/router';
 import { HouseComponent } from '../../layouts/house/house.component';
 
 import { CardComponent } from 'src/app/components/card/card.component';
+import { HousePageComponent } from 'src/app/pages/house.page/house.page.component';
 
 @NgModule({
-  declarations: [HouseComponent, CardComponent],
-  imports: [CommonModule, RouterModule.forChild([{ path: '', component: HouseComponent }])],
+  declarations: [HouseComponent, CardComponent, HousePageComponent],
+  imports: [
+    CommonModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HouseComponent,
+        children: [{ path: '', component: HousePageComponent }],
+      },
+    ]),
+  ],
   exports: [RouterModule],
+  providers: [],
 })
 export class HousesModule {}
