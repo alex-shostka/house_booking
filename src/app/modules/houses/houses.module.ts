@@ -1,29 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HouseComponent } from '../../layouts/house/house.component';
-
+import { HouseLayoutComponent } from '../../layouts/house/house-layout.component';
+import { HouseMainPageComponent } from 'src/app/pages/house-main-page/house-main-page.component';
+import { HouseViewPageComponent } from 'src/app/pages/house-view-page/house-view-page.component';
+import { HouseEditPageComponent } from 'src/app/pages/house-edit-page/house-edit-page.component';
 import { CardComponent } from 'src/app/components/card/card.component';
-import { HousePageComponent } from 'src/app/pages/house.page/house.page.component';
-import { HouseViewPageComponent } from 'src/app/pages/house-view.page/house-view.page.component';
-import { HouseEditPageComponent } from 'src/app/pages/house-edit.page/house-edit.page.component';
 
 @NgModule({
   declarations: [
-    HouseComponent,
-    CardComponent,
-    HousePageComponent,
+    HouseLayoutComponent,
+    HouseMainPageComponent,
     HouseViewPageComponent,
     HouseEditPageComponent,
+    CardComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: HouseComponent,
+        component: HouseLayoutComponent,
         children: [
-          { path: '', component: HousePageComponent },
+          { path: '', component: HouseMainPageComponent },
           { path: ':id', component: HouseViewPageComponent },
           { path: ':id/edit', component: HouseEditPageComponent },
         ],

@@ -4,9 +4,9 @@ import { switchMap } from 'rxjs';
 import { HouseService } from 'src/app/core/services/house.service';
 
 @Component({
-  selector: 'app-house-edit.page',
-  templateUrl: './house-edit.page.component.html',
-  styleUrls: ['./house-edit.page.component.css'],
+  selector: 'app-house-edit-page',
+  templateUrl: './house-edit-page.component.html',
+  styleUrls: ['./house-edit-page.component.css'],
 })
 export class HouseEditPageComponent implements OnInit {
   house!: any;

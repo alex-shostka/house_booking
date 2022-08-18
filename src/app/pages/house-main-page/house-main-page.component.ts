@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { HouseService } from 'src/app/core/services/house.service';
 
 @Component({
-  selector: 'app-house.page',
-  templateUrl: './house.page.component.html',
-  styleUrls: ['./house.page.component.css'],
+  selector: 'app-house-main-page',
+  templateUrl: './house-main-page.component.html',
+  styleUrls: ['./house-main-page.component.css'],
 })
-export class HousePageComponent implements OnInit {
+export class HouseMainPageComponent implements OnInit {
   houses: any = [];
 
   constructor(private houseService: HouseService) {}

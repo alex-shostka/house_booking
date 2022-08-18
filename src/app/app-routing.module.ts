@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './layouts/main/main.component';
-import { NotFoundComponent } from './layouts/not-found/not-found.component';
+import { MainLayoutComponent } from './layouts/main/main-layout.component';
+import { NotFoundComponent } from './layouts/not-found/not-found-layout.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
+    component: MainLayoutComponent,
     pathMatch: 'full',
   },
   {

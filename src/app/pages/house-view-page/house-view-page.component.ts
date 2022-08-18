@@ -4,9 +4,9 @@ import { switchMap } from 'rxjs';
 import { HouseService } from 'src/app/core/services/house.service';
 
 @Component({
-  selector: 'app-house-view.page',
-  templateUrl: './house-view.page.component.html',
-  styleUrls: ['./house-view.page.component.css'],
+  selector: 'app-house-view-page',
+  templateUrl: './house-view-page.component.html',
+  styleUrls: ['./house-view-page.component.css'],
 })
 export class HouseViewPageComponent implements OnInit {
   house$: any;
