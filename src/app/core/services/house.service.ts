@@ -13,4 +13,8 @@ export class HouseService {
   getHouses(): Observable<any> {
     return this.http.get(environment.getHouses);
   }
+
+  getHouse(id: number): Observable<any> {
+    return this.http.get(`${environment.getHouses}/${id}`);
+  }
 }

@@ -9,7 +9,13 @@ import { HouseViewPageComponent } from 'src/app/pages/house-view.page/house-view
 import { HouseEditPageComponent } from 'src/app/pages/house-edit.page/house-edit.page.component';
 
 @NgModule({
-  declarations: [HouseComponent, CardComponent, HousePageComponent, HouseViewPageComponent],
+  declarations: [
+    HouseComponent,
+    CardComponent,
+    HousePageComponent,
+    HouseViewPageComponent,
+    HouseEditPageComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild([
