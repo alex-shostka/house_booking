@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HouseLayoutComponent } from '../../layouts/house/house-layout.component';
+import { HouseLayoutComponent } from '../layouts/house/house-layout.component';
 import { HouseMainPageComponent } from 'src/app/pages/house-main-page/house-main-page.component';
 import { HouseViewPageComponent } from 'src/app/pages/house-view-page/house-view-page.component';
 import { HouseEditPageComponent } from 'src/app/pages/house-edit-page/house-edit-page.component';

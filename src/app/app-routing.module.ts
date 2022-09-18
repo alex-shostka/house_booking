@@ -13,7 +13,13 @@ const routes: Routes = [
   {
     path: 'houses',
     title: 'See all houses',
-    loadChildren: () => import('./modules/houses/houses.module').then((x) => x.HousesModule),
+    loadChildren: () => import('./modules/houses.module').then((x) => x.HousesModule),
+  },
+  {
+    path: 'livingQuarter',
+    title: 'See our Living Quarter',
+    loadChildren: () =>
+      import('./modules/living_quarter.module').then((x) => x.LivingQuarterModule),
   },
   {
     path: '**',
