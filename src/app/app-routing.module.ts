@@ -7,15 +7,18 @@ const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
+    title: 'House booking 3D',
     pathMatch: 'full',
   },
   {
     path: 'houses',
+    title: 'See all houses',
     loadChildren: () => import('./modules/houses/houses.module').then((x) => x.HousesModule),
   },
   {
     path: '**',
     pathMatch: 'full',
+    title: '404',
     component: NotFoundComponent,
   },
 ];

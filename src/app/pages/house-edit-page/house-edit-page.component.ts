@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { switchMap } from 'rxjs';
 import { HouseService } from 'src/app/core/services/house.service';
 
@@ -11,7 +12,11 @@ import { HouseService } from 'src/app/core/services/house.service';
 export class HouseEditPageComponent implements OnInit {
   house!: any;
 
-  constructor(private houseService: HouseService, private route: ActivatedRoute) {}
+  constructor(
+    private houseService: HouseService,
+    private route: ActivatedRoute,
+    private titleService: Title,
+  ) {}
 
   ngOnInit(): void {
     this.getHouseData();
@@ -26,7 +31,12 @@ export class HouseEditPageComponent implements OnInit {
       )
       .subscribe((house: any) => {
         this.house = house;
+        this.setTitle(this.house.id);
         // Create form and patch values to the form
       });
+  }
+
+  setTitle(id: number) {
+    this.titleService.setTitle(`Edit hoouse with ${id} id`);
   }
 }

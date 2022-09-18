@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  getHouses: 'https://jsonplaceholder.typicode.com/users',
+  getHouses: 'https://jsonplaceholder.typicode.com/photos',
 };
 
 /*
